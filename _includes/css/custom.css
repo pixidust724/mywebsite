@@ -16,6 +16,8 @@ h6 {
 h2 {
     padding-bottom: 32px;
 }
+
+
 .btn-success{
     background-color: #fff;
 	color: #4682B4;
@@ -45,7 +47,7 @@ h2 {
     padding: 16px 0;
     display: inline-block;
     max-width: 700px;
-    font-size:24px;
+    font-size:32px;
 
     text-align: left;
 }
@@ -85,18 +87,64 @@ form .row:first-child .floating-label-form-group{
     color:#BDE8C1;
 }
 
-section#about.success .row p{
-    margin: 0 auto;
+section#about.about{
+    padding: 40px;
+    background-color: #{{ site.color.primary}};
+}
+
+section.about h2{
+    padding: 16px 0;
     text-align: center;
+}
+section.about div.container {
+    display: flex;
+    align-items: center;
+}
+
+section.about div.container img.profile {
+    margin-right: 32px;
+    width: 100%;
+    border-radius: 100%;
+}
+
+section.about div.container p{
+    margin: 20px 0 20px 0;
+}
+
+
+section.about a{
+    color: #0000ee;
+    }
+
+section.about a.infocv:hover, a.cv:hover{
+color: #000;
+}
+
+
+/* section#about.success .row div.profile{
+    text-align: center;
+}
+
+section#about.success .row img{
+    margin: 0;
+    border-radius: 50%;
+    padding: 16px 0;
+}
+
+section#about.success .row p{
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0 auto;
+    padding-bottom: 16px;
     max-width: 900px;
 }
 
+section#about.success .row div.download {
+    display: flex;
+    align-items: center;
+} */
+
 /* Download CV button */
-.btn-lg, .btn-group-lg>.btn {
-border-radius: none;
-border: 1.2px solid #000;
-cursor: pointer;
-}
 
 .btn:hover, .btn:focus {
     color: #000;
@@ -112,6 +160,29 @@ a {
     color: #000;
 }
 
+section#contact a.btn-success {
+    cursor: pointer;
+    display: inline-block;
+
+    text-align: center;
+
+    padding: 16px 40px;
+    border-radius: 0;
+    border: 2px solid black;
+    color:#000;
+}
+
+section#contact a.btn-success:hover {
+    cursor: pointer;
+    display: inline-block;
+
+    text-align: center;
+
+    padding: 16px 40px;
+    border-radius: 0;
+    background-color: #000;
+    color:#eee;
+}
 
 footer {
     background: #{{ site.color.secondary-dark }};
