@@ -202,7 +202,35 @@ textarea {
 }
 
 
+/* footer icon styling */
+.list-footer li{
+    list-style-type: none;
+}
+
+.list-footer li a{
+    color: #eee;
+    width: 56px;
+    height: 56px;
+    padding-right: 16px;
+}
+.list-footer a svg:hover #github,
+.list-footer a svg:hover #linkedIn,
+.list-footer a svg:hover #medium
+ { 
+  fill: #eee;
+}
+
+.list-footer li a svg #github,
+.list-footer li a svg #linkedIn,
+.list-footer li a svg #medium{ 
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
+}
+
 footer {
+    color: #000;
     background: #{{ site.color.secondary-dark }};
 }
 
@@ -219,12 +247,27 @@ button.navbar-toggle {
 /* mobile bottom nav */
 
 a.btn.btn-primary {
-    background-color: #0000ee;
+    position: fixed;
+    right: 1em;
+    
+    transition: background 250ms ease-in-out,opacity 250ms ease-in-out,bottom 250ms;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: #4c5b5c;
 }
 
-a.btn.btn-primary:hover, 
-a.btn.btn-primary:focus {
-    border: none;
+a.btn.btn-primary img {
+    display: block;
+    margin: 10px auto;
+    width: 24px;
+    height: 24px;
+}
+
+a.btn.btn-primary:hover{
     background-color: #0000ee;
-    color: #eee;
 }

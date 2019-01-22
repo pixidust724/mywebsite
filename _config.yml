@@ -32,26 +32,24 @@ color:
   primary: BDE8C1
   primary-rgb: 3742F3 #"128,179,255"
   secondary: 000 #FD6E8A
-  secondary-dark: 4C4C4C #A2122F
+  secondary-dark: 7B7B7B #A2122F
 
 # Footer settings
-footer:
-  copyright: Dr. Henry Jekyll
-  location: Location
-  social: Around the Web
-  credits: Credits
+# footer:
+#   copyright: Dr. Henry Jekyll
+#   location: Location
+#   social: Around the Web
+#   credits: Credits
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
-social:
-  - title: twitter
-    url: http://twitter.com/jekyllrb
-  - title: github
-    url: http://github.com/
-  - title: medium
-    url: https://medium.com/@carrielau
+# social:
+#   - title: linkedin
+#     url: https://linkedin.com/in/claume/
+#   - title: github
+#     url: http://github.com/
+#   - title: medium
+#     url: https://medium.com/@carrielau
 
-
-# Credits content
 
 # Build settings
 markdown: kramdown
