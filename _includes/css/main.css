@@ -1,16 +1,10 @@
-/*!
- * Start Bootstrap - Freelancer Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
-
 body {
-    font-family: 'Karla', sans-serif;
+    font-family: '{{ site.fonts.primary }}', sans-serif;
     overflow-x: hidden;
 }
 
 p {
-    font-family: 'Karla', sans-serif;
+    font-family: '{{ site.fonts.primary }}', sans-serif;
     font-size: 20px;
 }
 
@@ -18,31 +12,7 @@ p.small {
     font-size: 16px;
 }
 
-a,
-a:hover,
-a:focus,
-a:active,
-a.active {
-    font-family: 'Karla', sans-serif;
-    outline: 0;
-    color: #{{ site.color.primary }};
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: 'Karla', sans-serif;
-}
-
-.img-centered {
-    margin: 0 auto;
-} */
-
 header {
-
     color: #000;
     background: #fff;
 }
@@ -59,7 +29,7 @@ header img {
 
 header .intro-text .name {
     display: block;
-    font-family: 'Karla', sans-serif;
+    font-family: '{{ site.fonts.primary }}', sans-serif;
     font-size: 2em;
     font-weight: 400;
 }
@@ -73,10 +43,6 @@ header .intro-text .skills {
     header .container {
         padding-top: 200px;
         padding-bottom: 100px;
-    }
-
-    header .intro-text .description {
-
     }
 
     header .intro-text .name {
@@ -114,7 +80,7 @@ header .intro-text .skills {
 
 .navbar {
     text-transform: uppercase;
-    font-family: 'Karla', sans-serif;
+    font-family: '{{ site.fonts.primary }}', sans-serif;
     font-weight: bold;
 }
 
@@ -216,24 +182,6 @@ section.success {
     }
 }
 
-.btn-outline {
-    margin-top: 15px;
-    border: solid 2px #fff;
-    font-size: 20px;
-    color: #fff;
-    background: 0 0;
-    transition: all .3s ease-in-out;
-}
-
-.btn-outline:hover,
-.btn-outline:focus,
-.btn-outline:active,
-.btn-outline.active {
-    border: solid 2px #fff;
-    color: #{{ site.color.primary }};
-    background: #fff;
-}
-
 .floating-label-form-group {
     position: relative;
     margin-bottom: 0;
@@ -241,19 +189,6 @@ section.success {
     border-bottom: 1px solid #eee;
 }
 
-.floating-label-form-group input,
-.floating-label-form-group textarea {
-    z-index: 1;
-    position: relative;
-    padding-right: 0;
-    padding-left: 0;
-    border: 0;
-    border-radius: 0;
-    font-size: 1.5em;
-    background: 0 0;
-    box-shadow: none!important;
-    resize: none;
-}
 
 .floating-label-form-group label {
     display: block;
@@ -389,28 +324,26 @@ footer .footer-below {
 }
 
 .portfolio-modal .close-modal .lr {
+ 
     z-index: 1051;
-    width: 1px;
-    height: 75px;
+    width: 2px;
+    height: 40px;
     margin-left: 35px;
-    background-color: #{{ site.color.secondary }};
+    background-color: #000;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 
 .portfolio-modal .close-modal .lr .rl {
+
     z-index: 1052;
-    width: 1px;
-    height: 75px;
-    background-color: #{{ site.color.secondary }};
+    width: 2px;
+    height: 40px;
+    background-color: #000;
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
-}
-
-.navbar-nav>.active>a {
-    color: #3DB6B8 !important;
 }
 
 /* Fix modal mouse wheel issues */

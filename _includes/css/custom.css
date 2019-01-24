@@ -1,32 +1,15 @@
 ---
 ---
-
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-family: 'Karla', sans-serif;
+    font-family: '{{ site.fonts.primary }}', sans-serif;
+    padding-bottom: 24px;
     font-weight: 700;
     text-transform: uppercase;
-}
-
-h2 {
-    padding-bottom: 32px;
-}
-
-
-.btn-success{
-    background-color: #fff;
-	color: #4682B4;
-    border-color: #4682B4;
-}
-.btn-success:hover {
-  background: #4682B4;
-  color: #fff;
-  border-color: #4682B4;		
 }
 
 .navbar{
@@ -35,6 +18,7 @@ h2 {
 }
 
 .navbar-default .navbar-nav>li>a {
+    padding-bottom: 8px;
     color: #000;
 }
 
@@ -43,7 +27,7 @@ h2 {
 }
 
 .description {
-    font-family: 'Karla', sans-serif;
+    font-family: '{{ site.fonts.primary }}', sans-serif;
     padding: 16px 0;
     display: inline-block;
     max-width: 700px;
@@ -53,7 +37,7 @@ h2 {
 }
 
 .skills {
-    font-family: 'Karla', sans-serif;
+    font-family: '{{ site.fonts.primary }}', sans-serif;
     font-weight: 700;
     text-align: left;
 }
@@ -63,36 +47,54 @@ section.success{
     background-color: #f2f2f2;
 }
 
-form .row:first-child .floating-label-form-group{
-    border-top: none;
-}
-
 .navbar-brand img{
     z-index: 2;
     width: 80px;
     height:40px;
+    padding-bottom: 8px;
 }
 
-
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus{
+    background-color: #fff;
+    color:#000;
+    font-size: 24px;
+    text-decoration: none;
+    /* needs to be non-inline */
+    display: inline-block;
+    position: relative;
+}
 
 .navbar-default .navbar-nav>.active>a, 
 .navbar-default .navbar-nav>.active>a:hover, 
 .navbar-default .navbar-nav>.active>a:focus {
     background-color: #fff;
-    color:#BDE8C1!important;
+    color:#0000ee;
 }
 
-.navbar-default .navbar-nav>li>a:hover, 
-.navbar-default .navbar-nav>li>a:focus {
-    color:#BDE8C1;
+.navbar-default .navbar-nav>li>a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0.1em;
+    background-color: currentColor;
+    width: 0;
+    transition: width 1s, left 1s;
 }
+
+.navbar-default .navbar-nav>li>a:hover:after {
+    width: 100%;
+  }
+
 
 section#about.about{
     padding: 40px;
     background-color: #{{ site.color.primary}};
 }
 
-section.about h2{
+section.about h2, section#contact h2{
     padding: 16px 0;
     text-align: center;
 }
@@ -120,71 +122,116 @@ section.about a.infocv:hover, a.cv:hover{
 color: #000;
 }
 
-
-/* section#about.success .row div.profile{
-    text-align: center;
-}
-
-section#about.success .row img{
-    margin: 0;
-    border-radius: 50%;
-    padding: 16px 0;
-}
-
-section#about.success .row p{
-    font-size: 18px;
-    line-height: 26px;
-    margin: 0 auto;
-    padding-bottom: 16px;
-    max-width: 900px;
-}
-
-section#about.success .row div.download {
-    display: flex;
-    align-items: center;
-} */
-
-/* Download CV button */
-
 .btn:hover, .btn:focus {
     color: #000;
     border-radius: none;
 }
+
+
 a {
+    font-size: 24px;
+    font-family: '{{ site.fonts.primary }}', sans-serif;
     color: #0000ee;
-}
+    text-decoration: none;
+  
+    /* needs to be non-inline */
+    display: inline-block;
+    position: relative;
+  }
 
 /* contact css */
-.floating-label-form-group input, .floating-label-form-group textarea{
-    font-family: 'Karla';
-    color: #000;
+section#contact {
+    justify-content: center;
+    padding: 40px;
 }
 
-section#contact a.btn-success {
-    cursor: pointer;
-    display: inline-block;
-
-    text-align: center;
-
-    padding: 16px 40px;
-    border-radius: 0;
-    border: 2px solid black;
-    color:#000;
+form#contactform {
+    max-width:420px; 
+    margin:50px auto;
+    margin: 0 auto;
+    justify-content: space-between;
 }
 
-section#contact a.btn-success:hover {
-    cursor: pointer;
-    display: inline-block;
+.feedback-input {
+  color:#000;
+  font-family: '{{ site.fonts.primary }}', sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid #000;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 24px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
 
-    text-align: center;
+.feedback-input:focus { border:2px solid #0000ee; }
 
-    padding: 16px 40px;
-    border-radius: 0;
-    background-color: #000;
-    color:#eee;
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+}
+
+[type="submit"] {
+  font-family: '{{ site.fonts.primary }}', sans-serif;
+  font-size:24px;
+
+  width: 100%;
+  color: #eee;
+  position: relative;
+  background-color: #000;
+  border: none;
+  padding: 20px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+}
+[type="submit"]:hover { 
+    background:#0000ee;
+}
+
+
+/* footer icon styling */
+
+footer ul {
+    padding-left: 0;
+}
+
+.list-footer li{
+    list-style-type: none;
+}
+
+.list-footer li a{
+    color: #eee;
+    width: 56px;
+    height: 56px;
+    padding-right: 16px;
+}
+.list-footer a svg:hover #github,
+.list-footer a svg:hover #linkedIn,
+.list-footer a svg:hover #medium
+ { 
+  fill: #eee;
+}
+
+.list-footer li a svg #github,
+.list-footer li a svg #linkedIn,
+.list-footer li a svg #medium{ 
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  -webkit-transition: 200ms;
+  -webkit-transition-timing-function: ease-in-out;
 }
 
 footer {
+    color: #000;
     background: #{{ site.color.secondary-dark }};
 }
 
@@ -201,5 +248,27 @@ button.navbar-toggle {
 /* mobile bottom nav */
 
 a.btn.btn-primary {
+    position: fixed;
+    right: 1em;
+    
+    transition: background 250ms ease-in-out,opacity 250ms ease-in-out,bottom 250ms;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: #4c5b5c;
+}
+
+a.btn.btn-primary img {
+    display: block;
+    margin: 10px auto;
+    width: 24px;
+    height: 24px;
+}
+
+a.btn.btn-primary:hover{
     background-color: #0000ee;
 }
