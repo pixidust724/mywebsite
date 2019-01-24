@@ -1,9 +1,3 @@
-/*!
- * Start Bootstrap - Freelancer Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
-
 body {
     font-family: '{{ site.fonts.primary }}', sans-serif;
     overflow-x: hidden;
@@ -17,10 +11,6 @@ p {
 p.small {
     font-size: 16px;
 }
-
-/* .img-centered {
-    margin: 0 auto;
-} */
 
 header {
     color: #000;
@@ -53,10 +43,6 @@ header .intro-text .skills {
     header .container {
         padding-top: 200px;
         padding-bottom: 100px;
-    }
-
-    header .intro-text .description {
-
     }
 
     header .intro-text .name {

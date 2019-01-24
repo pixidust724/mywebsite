@@ -1,7 +1,5 @@
 ---
 ---
-
-
 h1,
 h2,
 h3,
@@ -9,12 +7,9 @@ h4,
 h5,
 h6 {
     font-family: '{{ site.fonts.primary }}', sans-serif;
+    padding-bottom: 24px;
     font-weight: 700;
     text-transform: uppercase;
-}
-
-h2 {
-    padding-bottom: 32px;
 }
 
 .navbar{
@@ -23,6 +18,7 @@ h2 {
 }
 
 .navbar-default .navbar-nav>li>a {
+    padding-bottom: 8px;
     color: #000;
 }
 
@@ -55,21 +51,26 @@ section.success{
     z-index: 2;
     width: 80px;
     height:40px;
+    padding-bottom: 8px;
+}
+
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus{
+    background-color: #fff;
+    color:#000;
+    font-size: 24px;
+    text-decoration: none;
+    /* needs to be non-inline */
+    display: inline-block;
+    position: relative;
 }
 
 .navbar-default .navbar-nav>.active>a, 
 .navbar-default .navbar-nav>.active>a:hover, 
 .navbar-default .navbar-nav>.active>a:focus {
     background-color: #fff;
-    color:#0000ee!important;
-}
-
-.navbar-default .navbar-nav>li>a {
-    font-size: 24px;
-    text-decoration: none;
-    /* needs to be non-inline */
-    display: inline-block;
-    position: relative;
+    color:#0000ee;
 }
 
 .navbar-default .navbar-nav>li>a:after {
@@ -87,11 +88,6 @@ section.success{
     width: 100%;
   }
 
-
-/* .navbar-default .navbar-nav>li>a:hover, 
-.navbar-default .navbar-nav>li>a:focus {
-    color:#BDE8C1;
-} */
 
 section#about.about{
     padding: 40px;
@@ -203,6 +199,11 @@ textarea {
 
 
 /* footer icon styling */
+
+footer ul {
+    padding-left: 0;
+}
+
 .list-footer li{
     list-style-type: none;
 }
