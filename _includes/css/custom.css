@@ -17,7 +17,7 @@ h6 {
     background-color: #fff; 
 }
 
-.navbar-default .navbar-nav>li>a {
+.navbar-default, .navbar-nav>li>a {
     padding-bottom: 8px;
     color: #000;
 }
@@ -59,7 +59,7 @@ section.success{
 .navbar-default .navbar-nav>li>a:focus{
     background-color: #fff;
     color:#000;
-    font-size: 24px;
+    font-size: 18px;
     text-decoration: none;
     /* needs to be non-inline */
     display: inline-block;
@@ -88,6 +88,43 @@ section.success{
     width: 100%;
   }
 
+  header .container {
+      padding-top: 80px;
+      padding-bottom: 24px;
+  }
+/* filter css for portfolio */
+  div.filter {
+    display: flex;
+    justify-content: center;
+    margin: 16px auto;
+  }
+
+  div.filter a {
+      color: #000;
+      font-size: 14px;
+      margin-right:16px;
+  }
+
+  div.filter a:hover {
+      text-decoration: none;
+      color: #0000ee;
+  }
+
+  section#portfolio {
+      padding-top:32px;
+  }
+
+  #portfolio .portfolio-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  #portfolio .portfolio-item .portfolio-link {
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 16px;
+  }
 
 section#about.about{
     padding: 40px;
@@ -128,7 +165,7 @@ color: #000;
 }
 
 
-a {
+a, .filter a.selected {
     font-size: 24px;
     font-family: '{{ site.fonts.primary }}', sans-serif;
     color: #0000ee;
@@ -137,6 +174,11 @@ a {
     /* needs to be non-inline */
     display: inline-block;
     position: relative;
+  }
+
+  .filter a.selected {
+      font-size:14px;
+      border-bottom: 2px solid #0000ee;
   }
 
 /* contact css */
