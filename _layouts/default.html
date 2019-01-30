@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html>
-    {% include head.html %}
-    <body id="page-top" class="index">
+{% include head.html %}
+
+<body id="page-top" class="index">
     {% include nav.html %}
     {% include header.html %}
-    {% include portfolio_grid.html %}
-    {% include about.html %}
+<div class="container">
+    <div class="filter">
+        <a href="/" {% if page.url == "/" %} class="selected" {% endif %}> All</a>
+        <a href="/graphic/" {% if page.url == "/graphic/" %} class="selected" {% endif %}> Graphic</a>
+        <a href="/package/" {% if page.url == "/package/" %} class="selected" {% endif %}> Package</a>
+        <a href="/webdevelopment/" {% if page.url == "/webdevelopment/" %} class="selected" {% endif %}>Web Development</a>
+    </div>
+</div>
 
+    <div id="content">
+        {{ content }}
+    </div>
+
+    {% include about.html %}
     {% if site.contact == "static" %}
     {% include contact_static.html %}
     {% elsif site.contact == "disqus" %}
@@ -18,5 +30,10 @@
     {% include footer.html %}
     {% include modals.html %}
     {% include js.html %}
-    </body>
+
+</body>
+
 </html>
+{%comment%}
+{% include portfolio_grid.html %}
+{%endcomment%}
