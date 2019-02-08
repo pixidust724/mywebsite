@@ -1,15 +1,17 @@
 ---
 ---
+
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
     font-family: '{{ site.fonts.primary }}', sans-serif;
     padding-bottom: 24px;
     font-weight: 700;
     text-transform: uppercase;
+}
+
+div.intro-text h1 {
+    font-family: '{{ site.fonts.primary }}', sans-serif;
 }
 
 .navbar{
@@ -126,9 +128,21 @@ section.success{
     margin-bottom: 16px;
   }
 
+.modal-body p, li {
+    font-size: 16px;
+    line-height: 22px;
+    text-align: left;
+}
+
+.portfolio-modal .modal-content img {
+    display: inline-block;
+    max-width: 600px;
+}
+
 section#about.about{
     padding: 40px;
-    background-color: #{{ site.color.primary}};
+    color:#000;
+    background-color: #f8f8f8;
 }
 
 section.about h2, section#contact h2{
@@ -247,6 +261,7 @@ footer ul {
 }
 
 .list-footer li{
+    text-align: center;
     list-style-type: none;
 }
 
@@ -313,4 +328,40 @@ a.btn.btn-primary img {
 
 a.btn.btn-primary:hover{
     background-color: #0000ee;
+}
+
+@media(max-width:700px) {
+    h2,h3,h4 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    div.container {
+        margin: auto 16px;
+        padding:none;
+    }
+    span.description {
+        font-size: 24px;
+    }
+    section.about div.container {
+        justify-content: center;
+        display: block;
+    }
+    
+    section.about div.container img.profile {
+        display: flex;
+        margin: auto;
+        max-width: 200px;
+        border-radius: 100%;
+    }
+
+    #portfolio .portfolio-item .portfolio-link {
+        max-width: 600px;
+        margin: auto;
+        margin-bottom: 16px;
+      }
+
 }
